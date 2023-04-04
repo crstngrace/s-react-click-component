@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/svg+xml" href="https://crstngrace.github.io/me/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>React Click Count</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <footer>
+    <code>
+        <h3>Problems found in original code:</h3>
+        <ul>
+          <li>
+            Missing super reference to the parent class constructor
+            (Can't access this w/o parent constructor): <br />
+            <em>super(props)</em>
+          </li>
+          <li>
+            Missing event handler binding event: <br />
+            <em>this.clickHandler = this.clickHandler.bind(this);</em>
+          </li>
+          <li>
+            Incorrect click state: <br />
+            <em>this.setState({ clicks: this.clicks + 1 });</em>
+          </li>
+          <li>
+            Unnecessary right curly brace (&#125;) in: <br />
+            <em>&lt;h2&gt;My Component ({this.state.clicks} clicks})
+              &lt;h2&gt;</em>
+          </li>
+          <li>
+            Missing prop resulting in empty html element:
+            <br />
+            <em>&lt;h3&gt;{this.props.headerText}&lt;/h3&gt;</em>
+          </li>
+        </ul>
+      </code>
+  </footer>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./js/script.js" type="text/jsx"></script>
+</body>
+
+</html>
